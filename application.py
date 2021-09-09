@@ -33,6 +33,8 @@ def send(sum=sum):
                 result = "correct"
             else:
                 result = "incorrect"
+        else:
+            result = "Invalid"
         return result
 
     def toKelvin():
@@ -54,6 +56,8 @@ def send(sum=sum):
                 result = "correct"
             else:
                 result = "incorrect"
+        else:
+            result = "Invalid"
         return result
 
     def toRankine():
@@ -77,6 +81,8 @@ def send(sum=sum):
                 result = "correct"
             else:
                 result = "incorrect"
+        else:
+            result = "Invalid"
         return result
 
     def toCelsius():
@@ -98,6 +104,8 @@ def send(sum=sum):
                 result = "correct"
             else:
                 result = "incorrect"
+        else:
+            result = "Invalid"
         return result
     
   
