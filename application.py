@@ -21,17 +21,13 @@ def send(sum=sum):
                 result = "correct"
             else:
                 result = "incorrect"
-        else:
-            result = "invalid"
-        if (input_temp_unit=="Rankine"):
+        elif (input_temp_unit=="Rankine"):
             answer = (input_temp - 459.67)
             if (answer==student_response):
                 result = "correct"
             else:
                 result = "incorrect"
-        else:
-            result= "invalid"
-        if (input_temp_unit=="Kelvin"):
+        elif (input_temp_unit=="Kelvin"):
             answer = ((input_temp * 9/5) - 459.67)
             if (answer==student_response):
                 result = "correct"
