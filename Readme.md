@@ -44,15 +44,15 @@ python application.py
 ```
 
 ### Deploying the application into pipeline
-* Create pipeling in AWS Codepipeline
-* Add source repository [awesome-readme](https://github.com/sakian2/testTempProject.git)
-* Select aws Elasticbeanstalk as Stack
-* Select the Environment
+* Create a new Pipeling in AWS Codepipeline
+* Add source repository [testTempProject](https://github.com/sakian2/testTempProject.git)
+* Select aws 4CTempConverter as Stack
+* Select the "4CTempConverter-env" as Environment
 * Create the Pipeline and wait to deploy
 
 ### Git Info
-* After Cloning the repo, Create feature branch
-* Create pull request to main branch to merge the changes
+* After Cloning the repo, Create a feature branch.
+* Create pull request to main branch to merge the changes.
 * Code will be merged after the code review by the author and contributor.
 
 ## Authors
@@ -69,14 +69,12 @@ This project is not licensed yet.
 
 ## Improvements can be made Next
 ### Application
-* Managing Case Sensetive
-* Create Drop Down where it can list all the measure unit
-* Add +- button to increase/decrease the temperature
-* Integrate with the datatbase to save all the results for every students
-* Can use resstful API with flask and make it serverless(lambda)
+* Managing Case Sensitivity.
+* Create Drop Down where it can list all the measure unit.
+* Add +- button to increase/decrease the temperature.
+* Integrate with the datatbase to save all the results for every students.
+* Can use resstful API with flask and make it serverless(lambda).
 
 ### Infrastructure & Deployment
 * Adding integration test and unit test
 * Add email notification for build update in pipeline
-
-
