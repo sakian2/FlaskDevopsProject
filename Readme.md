@@ -1,90 +1,82 @@
-Managing Case Sensetive
-Create Drop Down where it can list all the measure unit
-Add +- button to increase/decrease the temperature
-Integrate with the datatbase to save all the results for every students
-Can use as resstful API and make it serverless(lambda)
+# Temperature Converter
 
-###########Deployment Inprovements###########
-#add integration test and unit test
-#Add email notification for build update in pipeline
-#
-
-########Terraform#######
-#Download all the files from the terraform directory
-#Create a S3 bucket and update the name of the bucket on backend.tf
-#Set aws access key and secret access key on the variables.tf file
-#For using the Aws default credentials profile, Use the providers.tf and remove variables.tf (default aws credentials "~./aws/credentials")
-#add a new user with admin programmatic access and authenticate using the access key
-#Check the version of the python image if its updated or not
-#Run "terraform init"
-#Run "terraform plan" & "terraform apply"
-#Open Aws Elastic Beanstack & open the application.
-#Access the sample app from the URL.
-
-############Application Deployment using Aws Codepipeline#############
-#
-
-
-# Project Title
-
-Simple overview of use/purpose.
+A simple flask application which can check the conversion of Celsius, Fahrenheit, Rankine & Kelvin. 
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This project is made for Flexion Devops Code Challenge. This project shows how to deploy the flask application into AWS Beanstalk and create the Ci/CD pipeline using AWS CodePipeline. For provisioning the infrastructure i have used Terraform. The state will be saved into S3 bucket for future use.
 
 ## Getting Started
 
+* Clone the terraform Repo: [TerraformElasticBeanstalk](https://github.com/sakian2/TerraformElasticBeanstalk.git)
+* Create a S3 bucket and update the name of the bucket on backend.tf
+* Run the terraform Script to create the stack
+* Set aws access key and secret access key on the variables.tf file
+* Add a new user with admin programmatic access and authenticate using the access key
+* Check the version of the python image from: [Aws Elastic Beanstalk Platform releases](https://docs.aws.amazon.com/elasticbeanstalk/latest/relnotes/release-2021-09-02-linux.html#release-2021-09-02-linux.platforms.python)
+* Run The following commands to create the stack using terraform
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+* Open Aws Elastic Beanstack & open the application from the link.
+* Access the sample app from the URL to check the successful deployment
+
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* terraform
+* virtual Environment to run locally
+* Flask
 
-### Installing
+### Running Application Locally
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
+* For running the flask locally you need to create virtual environment and run the application inside the environment. 
+* To create the environment and run the application locally use the following commands
 ```
-code blocks for commands
+pip install pipenv
+pipenv shell
+pipenv install flask
+pipenv install pylint
+pipenv install autopep8
+python application.py
 ```
 
-## Help
+### Deploying the application into pipeline
+* Create pipeling in AWS Codepipeline
+* Add source repository [awesome-readme](https://github.com/sakian2/testTempProject.git)
+* Select aws Elasticbeanstalk as Stack
+* Select the Environment
+* Create the Pipeline and wait to deploy
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+### Git Info
+* After Cloning the repo, Create feature branch
+* Create pull request to main branch to merge the changes
+* Code will be merged after the code review by the author and contributor.
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Mohius Sunnah Noor Sakian [@sakian2](https://linkedin.com/sakian2)
 
 ## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is not licensed yet.
 
-## Acknowledgments
+## Improvements can be made Next
+### Application
+* Managing Case Sensetive
+* Create Drop Down where it can list all the measure unit
+* Add +- button to increase/decrease the temperature
+* Integrate with the datatbase to save all the results for every students
+* Can use resstful API with flask and make it serverless(lambda)
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+### Infrastructure & Deployment
+* Adding integration test and unit test
+* Add email notification for build update in pipeline
+
 
