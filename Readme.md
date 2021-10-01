@@ -4,7 +4,7 @@ A simple flask application which can check the conversion of Celsius, Fahrenheit
 
 ## Description
 
-This project is made for Flexion Devops Code Challenge. This project shows how to deploy the flask application into AWS Beanstalk and create the Ci/CD pipeline using AWS CodePipeline. For provisioning the infrastructure i have used Terraform. The state will be saved into S3 bucket for future use.
+This project is made for understanding the basics of an flask web application deployment. This project shows how to deploy the flask application into AWS Elastic Beanstalk and create the Ci/CD pipeline using AWS CodePipeline. For provisioning the infrastructure i have used Terraform. The state will be saved into S3 bucket for future use.
 
 ## Getting Started
 
